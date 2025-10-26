@@ -1,6 +1,0 @@
-export enum ErroresTypes{
-    LEXICO = "LEXICO",
-    SINTACTICO = "SINTACTICO",
-    SEMANTICO = "SEMANTICO",
-    RUNTIME = "ERROR DE EJECUCION"
-}

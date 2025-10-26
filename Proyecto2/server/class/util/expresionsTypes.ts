@@ -1,0 +1,16 @@
+export enum ExpresionsTypes {
+    PRIMITIVO,
+    ARITMETICO,
+    RELACIONAL,
+    LOGICO,
+    ACCESO_ID,
+    FUNCION_NATIVA,
+    CASTEO,
+    ACCESS_LIST,
+    MINUSCULA,
+    MAYUSCULA,
+    LLAMADA_FUNCION,
+    RETURN,
+    TERNARIO,
+    ACCESO_OBJETO
+}

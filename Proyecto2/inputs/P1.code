@@ -1,0 +1,59 @@
+ejecutar main();
+
+
+entero var1 con valor 0;
+
+
+funcion entero mcd (entero a, entero b) {
+    si (b == 0) {
+        retornar a;
+    } de lo contrario {
+        retornar mcd(b, a % b);
+    }
+}
+
+
+procedimiento tablaMultiplicar (entero valor) {
+    entero i con valor 1;
+
+    mientras (i <= 11) {
+        cadena linea con valor (cadena) valor + " x " + (cadena) i + " = " + (cadena) (valor * i);
+        imprimir nl linea;
+        i = i + 1;
+    }
+
+    imprimir nl "Final de la tabla de multiplicar";
+}
+
+procedimiento recursividadBasica () {
+    entero resultado con valor mcd(48, 18);
+
+    si (resultado == 6) {
+        imprimir nl "Funcion recursiva correcta";
+        retornar;
+    }
+
+    imprimir nl "Funcion recursiva incorrecta";
+}
+
+procedimiento main () {
+    imprimir nl "Archivo de prueba";
+    imprimir nl "Si sale compi1";
+
+
+    entero var1 con valor 10;
+
+    si (var1 == 0) {
+        imprimir nl "Manejo de ambitos erroneo :'(";
+    } de lo contrario {
+        imprimir nl "Manejo de ambitos correcto";
+    }
+
+    // tabla de multiplicar
+    ejecutar tablaMultiplicar(5);
+
+    // recursividad
+    ejecutar recursividadBasica();
+
+    imprimir nl "Fin de la prueba";
+}

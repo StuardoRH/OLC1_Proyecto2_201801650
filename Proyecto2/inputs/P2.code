@@ -1,0 +1,44 @@
+funcion decimal absoluto (decimal x) {
+    si (x < 0) {
+        retornar -x;
+    } de lo contrario {
+        retornar x;
+    }
+}
+
+procedimiento figura1 (entero n) {
+    cadena cadenaFigura con valor "";
+    decimal i con valor (decimal) ((-3 * n) / 2);
+    
+    mientras (i <= n) {
+        cadenaFigura = "";
+        decimal j con valor (decimal) ((-3 * n) / 2);
+
+        mientras (j <= (3 * n)) {
+            decimal absolutoi con valor absoluto(i);
+            decimal absolutoj con valor absoluto(j);
+
+            si ( (absolutoi + absolutoj < n)
+                 || ( ((-n / 2) - i) * ((-n / 2) - i) + ((n / 2) - j) * ((n / 2) - j) <= (n * n) / 2 )
+                 || ( ((-n / 2) - i) * ((-n / 2) - i) + ((-n / 2) - j) * ((-n / 2) - j) <= (n * n) / 2 ) ) {
+                cadenaFigura = cadenaFigura + "* ";
+            } de lo contrario {
+                cadenaFigura = cadenaFigura + ". ";
+            }
+
+            j = j + 1;
+        }
+
+        imprimir nl cadenaFigura;
+        i = i + 1;
+    }
+
+    imprimir nl "Si la figura es un corazón, estás en el buen camino :D";
+}
+
+
+procedimiento metodo1 () {
+    ejecutar figura1(10);
+}
+
+ejecutar metodo1();
